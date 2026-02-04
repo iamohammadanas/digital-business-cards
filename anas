@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Business Card | Alexander Chen</title>
+    <style>
+        :root {
+            --bg-color: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --accent-blue: #007AFF;
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Profile Section */
+        .profile-ring {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-blue);
+            padding: 5px;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 0 15px rgba(0, 122, 255, 0.3);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #333; /* Placeholder */
+            object-fit: cover;
+        }
+
+        h1 { font-size: 1.5rem; margin: 0.5rem 0; letter-spacing: 1px; }
+        .title { color: var(--accent-blue); font-weight: 500; margin-bottom: 0.5rem; }
+        .bio { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 2rem; }
+
+        /* Buttons */
+        .cta-group { display: flex; gap: 10px; margin-bottom: 2rem; }
+        
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .btn-primary { background: var(--accent-blue); color: white; }
+        .btn-secondary { border: 1px solid #333; color: white; }
+        .btn:active { transform: scale(0.95); }
+
+        /* Grid Section */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .grid-item {
+            background: var(--card-bg);
+            border: 1px solid #2a2a2a;
+            padding: 20px 10px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.75rem;
+            transition: border 0.3s;
+        }
+
+        .grid-item:hover { border-color: var(--accent-blue); }
+        .grid-item i { display: block; font-size: 1.5rem; margin-bottom: 8px; }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-ring">
+            <img src="https://via.placeholder.com/150" alt="Alexander Chen" class="profile-img">
+        </div>
+
+        <h1>ALEXANDER CHEN</h1>
+        <div class="title">Head of Innovation</div>
+        <p class="bio">Building the future of seamless connectivity.</p>
+
+        <div class="cta-group">
+            <a href="#" class="btn btn-primary">SAVE CONTACT</a>
+            <a href="#" class="btn btn-secondary">MESSAGE ME</a>
+        </div>
+
+        <div class="grid">
+            <a href="mailto:alex@example.com" class="grid-item">
+                <i class="fas fa-envelope"></i> EMAIL
+            </a>
+            <a href="#" class="grid-item">
+                <i class="fas fa-calendar-alt"></i> CALENDAR
+            </a>
+            <a href="#" class="grid-item">
+                <i class="fas fa-briefcase"></i> PORTFOLIO
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
